@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ficha de Produto</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+    }
+    .tabs {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ccc;
+    }
+    .tab {
+      padding: 10px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-weight: 600;
+      color: #444;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s;
+    }
+    .tab.active {
+      border-bottom: 3px solid #0078d4;
+      color: #0078d4;
+    }
+    .tab i {
+      color: inherit;
+      transition: color 0.3s;
+    }
+    .tab-content {
+      display: none;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-label {
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      margin-bottom: 4px;
+      color: #505050;
+    }
+    .form-value {
+      background: #f1f3f4;
+      padding: 10px;
+      border-radius: 6px;
+      font-family: monospace;
+      color: #2d2d2d;
+    }
+    .icon {
+      font-size: 12px;
+      color: #605e5c;
+    }
+    .styled-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: "Segoe UI", sans-serif;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      margin-top: 1rem;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .styled-table thead {
+      background-color: #57c1b2;
+      color: white;
+      text-align: left;
+    }
+    .styled-table th,
+    .styled-table td {
+      padding: 12px 16px;
+      font-size: 14px;
+    }
+    .styled-table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <div class="tabs">
+    <button class="tab active" onclick="showTab('identificacao')"><i class="fas fa-id-badge icon"></i>Identificação</button>
+    <button class="tab" onclick="showTab('escopo')"><i class="fas fa-list icon"></i>Escopo</button>
+    <button class="tab" onclick="showTab('estrategia')"><i class="fas fa-bullseye icon"></i>Estratégia</button>
+    <button class="tab" onclick="showTab('qualificacao')"><i class="fas fa-check-circle icon"></i>Qualificação</button>
+  </div>
+
+  <div id="identificacao" class="tab-content active">
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-box icon"></i>Nome do Produto</label>
+      <div class="form-value">Planejamento Tributário
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-align-left icon"></i>Descrição do Produto</label>
+      <p class="form-value">
+        Analisa a situação fiscal da empresa para estruturar estratégias que reduzam a carga tributária de forma legal, aproveitando incentivos e evitando riscos, com impacto direto na lucratividade e na conformidade.
+      </p>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-barcode icon"></i>Código</label>
+      <div class="form-value">TAX002</div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-sitemap icon"></i>Área</label>
+      <div class="form-value">Gestão Tributária</div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-question-circle icon"></i>Classificação BCG</label>
+      <div class="form-value">Interrogação</div>
+    </div>
+    </div>
+
+  </div>
+
+  <div id="escopo" class="tab-content">
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-file-alt icon"></i>Escopo</label>
+      <div class="form-value">
+        <ol data-start="138" data-end="1064">
+          <li data-start="138" data-end="304" class="" style="">
+          <p data-start="141" data-end="304" class=""><strong data-start="141" data-end="191">Levantamento de dados contábeis e operacionais</strong><br data-start="191" data-end="194">
+          Coleta e análise de informações que impactam a carga tributária: faturamento, custos, despesas e estrutura.</p>
+          </li>
+          <li data-start="306" data-end="452" class="" style="">
+          <p data-start="309" data-end="452" class=""><strong data-start="309" data-end="346">Simulação de cenários tributários</strong><br data-start="346" data-end="349">
+          Comparação entre regimes (Lucro Real, Presumido e Simples Nacional) com base em projeções realistas.</p>
+          </li>
+          <li data-start="454" data-end="616" class="" style="">
+          <p data-start="457" data-end="616" class=""><strong data-start="457" data-end="508">Identificação de oportunidades de elisão fiscal</strong><br data-start="508" data-end="511">
+          Apontamento de alternativas legais para redução da carga tributária, respeitando a legislação vigente.</p>
+          </li>
+          <li data-start="618" data-end="771" class="" style="">
+          <p data-start="621" data-end="771" class=""><strong data-start="621" data-end="670">Análise da estrutura societária e operacional</strong><br data-start="670" data-end="673">
+          Avaliação de possibilidades de reestruturação para otimização fiscal e alinhamento estratégico.</p>
+          </li>
+          <li data-start="773" data-end="912" class="" style="">
+          <p data-start="776" data-end="912" class=""><strong data-start="776" data-end="816">Reunião de apresentação dos cenários</strong><br data-start="816" data-end="819">
+          Discussão dos resultados com o cliente, orientando sobre riscos, ganhos e próximos passos.</p>
+          </li>
+          <li data-start="914" data-end="1064" class="" style="">
+          <p data-start="917" data-end="1064" class=""><strong data-start="917" data-end="968">Entrega de relatório com diagnóstico e cenários</strong><br data-start="968" data-end="971">
+          Documento final com os cálculos comparativos, recomendações e caminhos para implementação.</p>
+          </li>
+          </ol>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-list-check icon"></i>Problemas que Resolve
+      </label>
+      <div class="form-value">
+        <ol data-start="136" data-end="604">
+          <li data-start="136" data-end="211" class="">
+          <p data-start="139" data-end="211" class="">Escolha inadequada do regime tributário, gerando custos desnecessários</p>
+          </li>
+          <li data-start="212" data-end="300" class="">
+          <p data-start="215" data-end="300" class="">Falta de projeção fiscal, comprometendo o planejamento financeiro e a lucratividade</p>
+          </li>
+          <li data-start="301" data-end="376" class="">
+          <p data-start="304" data-end="376" class="">Riscos legais por estruturas societárias mal definidas ou ineficientes</p>
+          </li>
+          <li data-start="377" data-end="445" class="">
+          <p data-start="380" data-end="445" class="">Perda de benefícios fiscais por desconhecimento ou má aplicação</p>
+          </li>
+          <li data-start="446" data-end="521" class="">
+          <p data-start="449" data-end="521" class="">Insegurança na tomada de decisão por ausência de cenários comparativos</p>
+          </li>
+          <li data-start="522" data-end="604" class="">
+          <p data-start="525" data-end="604" class="">Falta de alinhamento entre operação, estratégia e legislação tributária vigente</p>
+          </li>
+          </ol>
+      </div>
+
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="	fas fa-trophy icon"></i>Benefícios
+      </label>
+      <div class="form-value">
+        <ol data-start="135" data-end="405">
+          <li data-start="135" data-end="199" class="">
+          <p data-start="138" data-end="199" class="">Redução legal da carga tributária por meio de elisão fiscal</p>
+          </li>
+          <li data-start="200" data-end="260" class="">
+          <p data-start="203" data-end="260" class="">Otimização do regime tributário com base em dados reais</p>
+          </li>
+          <li data-start="261" data-end="324" class="">
+          <p data-start="264" data-end="324" class="">Melhoria da gestão de caixa com previsibilidade tributária</p>
+          </li>
+          <li data-start="325" data-end="405" class="">
+          <p data-start="328" data-end="405" class="">Tomada de decisão mais assertiva com base em simulações e relatórios técnicos</p>
+          </li>
+          </ol>
+      </div>
+    </div>
+  </div>
+
+  <div id="estrategia" class="tab-content">
+
+    <div class="form-group">
+        <label class="form-label"><i class="fas fa-fire icon"></i>Prioridade de Venda</label>
+        <div class="form-value">Média</div>
+      </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-lightbulb icon"></i>Quando Ofertar</label>
+      <div class="form-value">
+        
+        <ol data-start="117" data-end="447">
+          <li data-start="117" data-end="175" class="">
+          <p data-start="120" data-end="175" class="">Ao revisar o regime tributário para o novo ano fiscal</p>
+          </li>
+          <li data-start="176" data-end="243" class="">
+          <p data-start="179" data-end="243" class="">Antes de uma reestruturação societária ou expansão de unidades</p>
+          </li>
+          <li data-start="244" data-end="310" class="">
+          <p data-start="247" data-end="310" class="">Quando a empresa deseja reduzir legalmente a carga tributária</p>
+          </li>
+          <li data-start="311" data-end="369" class="">
+          <p data-start="314" data-end="369" class="">Após crescimento acelerado ou mudanças no faturamento</p>
+          </li>
+          <li data-start="370" data-end="447" class="">
+          <p data-start="373" data-end="447" class="">Quando há dúvidas sobre o melhor enquadramento fiscal ou uso de incentivos</p>
+          </li>
+          </ol>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-gem icon"></i>Proposta de Valor</label>
+      <div class="form-value">O Planejamento Tributário da Funcional potencializa os resultados da empresa com segurança, eficiência e inteligência. Unindo análise técnica, estratégia fiscal e simulações personalizadas, garantimos economia legal, previsibilidade financeira e apoio à tomada de decisão.
+
+    </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-shopping-basket icon"></i>Cross-selling</label>
+      <div class="form-value">
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Produto Complementar</th>
+              <th>Justificativa da Conexão</th>
+              <th>Área Responsável</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Compliance Tributário</td>
+              <td>Etapa posterior ao planejamento; garante a correta execução, atualização e manutenção das estratégias desenhadas.</td>
+              <td>Gestão Tributária</td>
+            </tr>
+            <tr>
+              <td>Assessoria Tributária (Dúvidas e Direcionamentos)</td>
+              <td>Suporte contínuo para tomada de decisões após a implementação do planejamento; ideal para clientes em fase de amadurecimento.</td>
+              <td>Gestão Tributária</td>
+            </tr>
+            <tr>
+              <td>Recuperação de Tributos - PIS / COFINS</td>
+              <td>Pode ser ativada a partir das análises feitas no planejamento; aumenta a rentabilidade imediata e viabiliza novas estratégias.</td>
+              <td>Gestão Tributária</td>
+            </tr>
+            <tr>
+              <td>Revisão de Grade Tributária</td>
+              <td>Identifica distorções e oportunidades não mapeadas previamente, refinando o plano traçado.</td>
+              <td>Gestão Tributária</td>
+            </tr>
+            <tr>
+              <td>Incentivos, Benefícios e Estratégias Fiscais</td>
+              <td>Parte do escopo ampliado do planejamento; ideal para empresas que desejam expandir ou mudar de regime.</td>
+              <td>Gestão Tributária</td>
+            </tr>
+            <tr>
+              <td>Lei do Bem – Benefício Fiscal IRPJ/CSLL</td>
+              <td>Complementa o planejamento para empresas inovadoras e com despesas em P&D; impulsiona economia fiscal.</td>
+              <td>Gestão Tributária</td>
+            </tr>
+            <tr>
+              <td>Recuperação de Tributos – IRPJ / CSLL</td>
+              <td>Complementar ao mapeamento estratégico tributário, especialmente para validar regimes passados e corrigir distorções.</td>
+              <td>Gestão Tributária</td>
+            </tr>
+            <tr>
+              <td>Planejamento Sucessório e Patrimonial</td>
+              <td>Alta sinergia para grupos empresariais e familiares; garante blindagem jurídica e continuidade do plano tributário.</td>
+              <td>Jurídico</td>
+            </tr>
+            <tr>
+              <td>Reorganização Societária</td>
+              <td>O planejamento pode demandar ajustes societários para otimizar a carga fiscal ou viabilizar benefícios específicos.</td>
+              <td>Jurídico</td>
+            </tr>
+            <tr>
+              <td>Auditoria de Obrigações Acessórias</td>
+              <td>Identifica falhas que comprometem os ganhos esperados no planejamento; reduz riscos fiscais.</td>
+              <td>Gestão Tributária</td>
+            </tr>
+            <tr>
+              <td>BPO Contábil e Tributário – Indústria e Comércio</td>
+              <td>Garante execução contábil/tributária alinhada ao planejado; ideal para empresas com estrutura enxuta ou em expansão.</td>
+              <td>Contabilidade</td>
+            </tr>
+            <tr>
+              <td>Diagnóstico Empresarial</td>
+              <td>Etapa inicial para clientes imaturos; antecipa necessidades e embasa o planejamento com dados consistentes.</td>
+              <td>Consultoria Empresarial</td>
+            </tr>
+            <tr>
+              <td>Valuation</td>
+              <td>Utilizado em planejamentos mais estratégicos que envolvem reorganização, venda parcial ou entrada de sócios; fundamental para mensurar impacto tributário.</td>
+              <td>Consultoria Empresarial</td>
+            </tr>
+          </tbody>
+        </table>
+          
+
+      </div>
+    </div>
+  </div>
+
+  <div id="qualificacao" class="tab-content">
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-briefcase icon"></i>Regime Tributário Atendimento</label>
+      <div class="form-value">Lucro Real, Simples Nacional e Lucro Presumido</div>
+    </div>
+    <div class="form-group">
+        <label class="form-label"><i class="fas fa-sync-alt icon"></i>Tipo de Cobrança</label>
+        <div class="form-value">Pontual</div>
+      </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-globe icon"></i>Abrangência Geográfica</label>
+      <div class="form-value">Nacional</div>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label"><i class=" fas fa-file-invoice-dollar icon"></i>Faturamento Ideal</label>
+        <div class="form-value">A partir de 500K mensal </div>
+      </div>
+
+    <div class="form-group">
+        <label class="form-label"><i class="fas fa-paperclip icon"></i>Documentos Solicitados</label>
+        <div class="form-value">
+          <ol data-start="134" data-end="235">
+            <li data-start="134" data-end="146" class="" style="">
+            <p data-start="137" data-end="146" class="">Balanço</p>
+            </li>
+            <li data-start="147" data-end="198" class="" style="">
+            <p data-start="150" data-end="198" class="">DRE (Demonstrativo de Resultados do Exercício)</p>
+            </li>
+            <li data-start="199" data-end="213" class="">
+            <p data-start="202" data-end="213" class="">SPED ICMS</p>
+            </li>
+            <li data-start="214" data-end="235" class="">
+            <p data-start="217" data-end="235" class="">SPED Contribuições</p>
+            </li>
+            </ol>
+        </div>
+        
+              </div>
+
+              <div class="form-group">
+                <label class="form-label"><i class=" fas fa-industry icon"></i>Setores ICP</label>
+                <div class="form-value">Transporte, Indústria, Agronegócio. </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label"><i class="fas fa-exclamation-circle icon"></i>Objeções Mapeadas</label>
+                <div class="form-value">
+                  <table class="styled-table">
+                    <thead>
+                      <tr>
+                        <th>Objeção</th>
+                        <th>O que o cliente quer dizer</th>
+                        <th>Como contornar</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>“Isso aí não é só pra empresa grande?”</td>
+                        <td>Acha que sua empresa é pequena demais para se beneficiar.</td>
+                        <td>"Na verdade, pequenas e médias empresas são as que mais se beneficiam. Conseguimos aplicar estratégias simples, legais e com retorno direto no caixa."</td>
+                      </tr>
+                      <tr>
+                        <td>“Isso vai me dar problema com o fisco depois?”</td>
+                        <td>Está com medo de cair na malha fina ou gerar autuações.</td>
+                        <td>"Trabalhamos com total segurança jurídica. Todas as estratégias são previstas na legislação e contam com documentação técnica que comprova sua legalidade."</td>
+                      </tr>
+                      <tr>
+                        <td>“Ah, mas meu contador já faz isso pra mim...”</td>
+                        <td>Não entende a diferença entre apuração e planejamento tributário.</td>
+                        <td>"O contador cuida da apuração mensal. O planejamento é estratégico: encontramos oportunidades que muitas vezes passam despercebidas na rotina. É um trabalho complementar."</td>
+                      </tr>
+                      <tr>
+                        <td>“Acho que agora não é prioridade...”</td>
+                        <td>Está sobrecarregado ou com foco em outros temas urgentes.</td>
+                        <td>"É justamente em momentos de aperto que o planejamento ajuda mais, liberando caixa e aumentando margem. Podemos fazer isso sem interferir na rotina."</td>
+                      </tr>
+                      <tr>
+                        <td>“Já tentei isso antes e não funcionou”</td>
+                        <td>Teve uma experiência negativa anterior e está cético.</td>
+                        <td>"Totalmente compreensível. Nossa abordagem começa com um diagnóstico gratuito e só avançamos se houver ganhos reais. Temos metodologia validada e cases comprovando resultados."</td>
+                      </tr>
+                      <tr>
+                        <td>“Esse tipo de serviço deve ser caro…”</td>
+                        <td>Acredita que não cabe no orçamento ou que o custo é alto demais.</td>
+                        <td>"Entendemos a preocupação com investimento, mas o que entregamos vai além do básico: atuamos com profundidade técnica, visão estratégica e foco em resultado real. Enquanto muitos oferecem soluções genéricas, nosso time mapeia oportunidades específicas para o seu negócio, garantindo impacto concreto e segurança. É isso que faz nossos clientes voltarem e indicarem."</td>
+                    </tr>
+                    
+                    </tbody>
+                  </table>
+                  
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label"><i class=" fas fa-industry icon"></i>Personas</label>
+                <div class="form-value">
+                    <ul data-start="107" data-end="257">
+                        <li data-start="107" data-end="173" class="" style="">
+                        <p data-start="109" data-end="173" class=""><strong data-start="109" data-end="129">Influenciadores:</strong> Consultor, Controller, Gerente Financeiro</p>
+                        </li>
+                        <li data-start="174" data-end="257" class="" style="">
+                        <p data-start="176" data-end="257" class=""><strong data-start="176" data-end="190">Decisores:</strong> CFO, Proprietários, Sócios</p>
+                        </li>
+                        </ul> </div>
+              </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-star-half-alt icon"></i>Diferenciais</label>
+      <div class="form-value">Nossas entregas são baseadas em uma análise estratégica personalizada, com simulações comparativas e cenários construídos a partir dos dados reais da empresa. Atuamos de forma integrada com áreas como contabilidade, jurídico e financeiro, garantindo que a recomendação seja aplicável na prática — com segurança, clareza e impacto direto no caixa.
+
+        Contamos com uma equipe multidisciplinar, atualizada com a legislação mais recente, e entregamos um relatório técnico completo, pronto para embasar decisões com sócios, auditorias ou até defesas fiscais. Tudo isso com uma comunicação transparente, didática e voltada à tomada de decisão.</div>
+    </div>
+  </div>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      document.querySelector(`.tab[onclick="showTab('${id}')"]`).classList.add('active');
+    }
+  </script>
+</body>
+</html>
